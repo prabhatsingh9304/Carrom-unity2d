@@ -48,7 +48,7 @@ public class CarromAI : MonoBehaviour
 
     public IEnumerator WaitForTurnToFinish()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
         gameManager.enemydone = true;
     }
 }

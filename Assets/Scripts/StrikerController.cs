@@ -40,13 +40,12 @@ public class StrikerController : MonoBehaviour
 
             if (hit.collider)
             {
+                Debug.Log(hit.transform.name);
                 if (hit.transform.name == "Striker")
                 {
                     StrikerForce = true;
                 }
-
-
-
+                
                 if (StrikerForce)
                 {
                     StrikerBG.LookAt(hit.point);
@@ -64,9 +63,7 @@ public class StrikerController : MonoBehaviour
             StrikerForce = false;
 
             StrikerBG.localScale = Vector3.zero;
-
             gameManager.playerdone = true;
-
         }
     }
 

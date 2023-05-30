@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
 
         if (isPlayer1Turn)
             player1.SetActive(false);
-        else
+        else if (!isPlayer1Turn)
             player2.SetActive(false);
 
         yield return new WaitForSeconds(0.5f);
@@ -161,7 +161,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator WaitForTurnToFinish()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
         yield return new WaitUntil(() => aremoving == false);
         StartCoroutine(SwitchPlayers());
     }
